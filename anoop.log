@@ -1,0 +1,294 @@
+2020-02-12 12:46:24.669 ERROR 28800 --- [main] o.s.b.l.LoggingApplicationListener       : Cannot set level: TRACE  for 'org.hibernate.type.descriptor.sql.BasicBinder'
+2020-02-12 12:46:25.021  INFO 28800 --- [main] com.zoo.SpringBootApplication            : Starting SpringBootApplication on iris-csg-1645 with PID 28800 (C:\Users\anoop.gangwar\.git\springboothibernate\target\classes started by anoop.gangwar in C:\Users\anoop.gangwar\.git\springboothibernate)
+2020-02-12 12:46:25.022  INFO 28800 --- [main] com.zoo.SpringBootApplication            : No active profile set, falling back to default profiles: default
+2020-02-12 12:46:25.162  INFO 28800 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@cb0755b: startup date [Wed Feb 12 12:46:25 IST 2020]; root of context hierarchy
+2020-02-12 12:46:27.952  INFO 28800 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fcdb437a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-12 12:46:29.871  INFO 28800 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 9090 (http)
+2020-02-12 12:46:29.945  INFO 28800 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-12 12:46:29.946  INFO 28800 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2020-02-12 12:46:30.423  INFO 28800 --- [localhost-startStop-1] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2020-02-12 12:46:30.432  INFO 28800 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-12 12:46:30.432  INFO 28800 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5274 ms
+2020-02-12 12:46:30.681  INFO 28800 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2020-02-12 12:46:30.688  INFO 28800 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-02-12 12:46:34.334  INFO 28800 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2020-02-12 12:46:34.375  INFO 28800 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-12 12:46:34.554  INFO 28800 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2020-02-12 12:46:34.558  INFO 28800 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2020-02-12 12:46:34.561  INFO 28800 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2020-02-12 12:46:34.636  INFO 28800 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2020-02-12 12:46:34.896  INFO 28800 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2020-02-12 12:46:35.868 ERROR 28800 --- [main] o.hibernate.internal.SessionFactoryImpl  : HHH000302: Unable to construct current session context [org.springframework.orm.hibernate5.SpringSessionContext ]
+
+org.hibernate.boot.registry.classloading.spi.ClassLoadingException: Unable to load class [org.springframework.orm.hibernate5.SpringSessionContext ]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:229) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.buildCurrentSessionContext(SessionFactoryImpl.java:1236) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:482) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879) ~[hibernate-entitymanager-5.0.12.Final.jar:5.0.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60) ~[spring-orm-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:360) [spring-orm-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:384) [spring-orm-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:371) [spring-orm-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:336) [spring-orm-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1692) [spring-beans-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1630) [spring-beans-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) [spring-beans-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) [spring-beans-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312) [spring-beans-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) [spring-beans-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308) [spring-beans-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) [spring-beans-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1080) [spring-context-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:857) [spring-context-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) [spring-context-4.3.17.RELEASE.jar:4.3.17.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.13.BUILD-SNAPSHOT.jar:1.5.13.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.13.BUILD-SNAPSHOT.jar:1.5.13.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.13.BUILD-SNAPSHOT.jar:1.5.13.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.13.BUILD-SNAPSHOT.jar:1.5.13.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.13.BUILD-SNAPSHOT.jar:1.5.13.BUILD-SNAPSHOT]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.13.BUILD-SNAPSHOT.jar:1.5.13.BUILD-SNAPSHOT]
+	at com.zoo.SpringBootApplication.main(SpringBootApplication.java:14) [classes/:na]
+Caused by: java.lang.ClassNotFoundException: Could not load requested class : org.springframework.orm.hibernate5.SpringSessionContext 
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl$AggregatedClassLoader.findClass(ClassLoaderServiceImpl.java:217) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_131]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_131]
+	at java.lang.Class.forName0(Native Method) ~[na:1.8.0_131]
+	at java.lang.Class.forName(Class.java:348) ~[na:1.8.0_131]
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.classForName(ClassLoaderServiceImpl.java:226) ~[hibernate-core-5.0.12.Final.jar:5.0.12.Final]
+	... 27 common frames omitted
+
+2020-02-12 12:46:35.974  INFO 28800 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-12 12:46:36.493  INFO 28800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/]}" onto public java.lang.String com.zoo.controller.IndexController.home(java.util.Map<java.lang.String, java.lang.Object>)
+2020-02-12 12:46:36.503  INFO 28800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zoo/getAnimalType],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.zoo.dto.AnimalTypeDTO>> com.zoo.controller.ZooController.getAnimalType()
+2020-02-12 12:46:36.504  INFO 28800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zoo/searchAnimal],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.zoo.dto.AnimalDTO>> com.zoo.controller.ZooController.searchAnimal(java.lang.Integer,java.lang.Integer,java.lang.Integer)
+2020-02-12 12:46:36.504  INFO 28800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/zoo/getArea],methods=[GET]}" onto public org.springframework.http.ResponseEntity<java.util.List<com.zoo.dto.AreaDTO>> com.zoo.controller.ZooController.getArea()
+2020-02-12 12:46:36.508  INFO 28800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2020-02-12 12:46:36.509  INFO 28800 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2020-02-12 12:46:36.713  INFO 28800 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@cb0755b: startup date [Wed Feb 12 12:46:25 IST 2020]; root of context hierarchy
+2020-02-12 12:46:36.830  INFO 28800 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in userExceptionHandler2
+2020-02-12 12:46:36.836  INFO 28800 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : Detected @ExceptionHandler methods in zooExceptionHandler
+2020-02-12 12:46:37.990  INFO 28800 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-02-12 12:46:38.179  INFO 28800 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 9090 (http)
+2020-02-12 12:46:38.254  INFO 28800 --- [main] com.zoo.SpringBootApplication            : Started SpringBootApplication in 14.006 seconds (JVM running for 15.337)
+2020-02-12 12:47:01.240  INFO 28800 --- [http-nio-9090-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2020-02-12 12:47:01.241  INFO 28800 --- [http-nio-9090-exec-10] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2020-02-12 12:47:01.274  INFO 28800 --- [http-nio-9090-exec-10] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2020-02-12 12:47:02.306  WARN 28800 --- [http-nio-9090-exec-7] o.s.web.servlet.PageNotFound             : No mapping found for HTTP request with URI [/script/zoo.js] in DispatcherServlet with name 'dispatcherServlet'
+2020-02-12 12:47:02.486  INFO 28800 --- [http-nio-9090-exec-8] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2020-02-12 12:47:02.692 DEBUG 28800 --- [http-nio-9090-exec-9] org.hibernate.SQL                        : 
+    select
+        animaltype0_.id as id1_3_,
+        animaltype0_.additional_attribute as addition2_3_,
+        animaltype0_.animal_type_desc as animal_t3_3_ 
+    from
+        animal_type animaltype0_
+2020-02-12 12:47:02.692 DEBUG 28800 --- [http-nio-9090-exec-8] org.hibernate.SQL                        : 
+    select
+        area0_.id as id1_4_,
+        area0_.area_name as area_nam2_4_,
+        area0_.area_zoo as area_zoo3_4_ 
+    from
+        area area0_
+2020-02-12 12:47:02.766 DEBUG 28800 --- [http-nio-9090-exec-8] org.hibernate.SQL                        : 
+    select
+        pens0_.pen_area as pen_area3_5_1_,
+        pens0_.id as id1_5_1_,
+        pens0_.id as id1_5_0_,
+        pens0_.pen_area as pen_area3_5_0_,
+        pens0_.pen_name as pen_name2_5_0_ 
+    from
+        pen pens0_ 
+    where
+        pens0_.pen_area in (
+            select
+                area0_.id 
+            from
+                area area0_
+        )
+2020-02-12 12:47:14.006 DEBUG 28800 --- [http-nio-9090-exec-4] org.hibernate.SQL                        : 
+    select
+        animal0_.id as id1_2_,
+        animal0_.animal_name as animal_n2_2_,
+        animal0_.animal_type as animal_t3_2_,
+        animal0_.pen_id as pen_id4_2_ 
+    from
+        animal animal0_ 
+    inner join
+        pen pen1_ 
+            on animal0_.pen_id=pen1_.id 
+    inner join
+        area area2_ 
+            on pen1_.pen_area=area2_.id 
+    inner join
+        zoo zoo3_ 
+            on area2_.area_zoo=zoo3_.id 
+    inner join
+        animal_type animaltype4_ 
+            on animal0_.animal_type=animaltype4_.id 
+    where
+        1=1
+2020-02-12 12:47:16.557 DEBUG 28800 --- [http-nio-9090-exec-4] org.hibernate.SQL                        : 
+    select
+        pen0_.id as id1_5_0_,
+        pen0_.pen_area as pen_area3_5_0_,
+        pen0_.pen_name as pen_name2_5_0_,
+        area1_.id as id1_4_1_,
+        area1_.area_name as area_nam2_4_1_,
+        area1_.area_zoo as area_zoo3_4_1_ 
+    from
+        pen pen0_ 
+    left outer join
+        area area1_ 
+            on pen0_.pen_area=area1_.id 
+    where
+        pen0_.id=?
+2020-02-12 12:47:16.567 DEBUG 28800 --- [http-nio-9090-exec-4] org.hibernate.SQL                        : 
+    select
+        pens0_.pen_area as pen_area3_5_0_,
+        pens0_.id as id1_5_0_,
+        pens0_.id as id1_5_1_,
+        pens0_.pen_area as pen_area3_5_1_,
+        pens0_.pen_name as pen_name2_5_1_ 
+    from
+        pen pens0_ 
+    where
+        pens0_.pen_area=?
+2020-02-12 12:47:16.572 DEBUG 28800 --- [http-nio-9090-exec-4] org.hibernate.SQL                        : 
+    select
+        zoo0_.id as id1_6_0_,
+        zoo0_.zoo_name as zoo_name2_6_0_ 
+    from
+        zoo zoo0_ 
+    where
+        zoo0_.id=?
+2020-02-12 12:47:16.574 DEBUG 28800 --- [http-nio-9090-exec-4] org.hibernate.SQL                        : 
+    select
+        animaltype0_.id as id1_3_0_,
+        animaltype0_.additional_attribute as addition2_3_0_,
+        animaltype0_.animal_type_desc as animal_t3_3_0_ 
+    from
+        animal_type animaltype0_ 
+    where
+        animaltype0_.id=?
+2020-02-12 12:47:16.576 DEBUG 28800 --- [http-nio-9090-exec-4] org.hibernate.SQL                        : 
+    select
+        animaltype0_.id as id1_3_0_,
+        animaltype0_.additional_attribute as addition2_3_0_,
+        animaltype0_.animal_type_desc as animal_t3_3_0_ 
+    from
+        animal_type animaltype0_ 
+    where
+        animaltype0_.id=?
+2020-02-12 12:47:16.578 DEBUG 28800 --- [http-nio-9090-exec-4] org.hibernate.SQL                        : 
+    select
+        animaltype0_.id as id1_3_0_,
+        animaltype0_.additional_attribute as addition2_3_0_,
+        animaltype0_.animal_type_desc as animal_t3_3_0_ 
+    from
+        animal_type animaltype0_ 
+    where
+        animaltype0_.id=?
+2020-02-12 12:47:16.582 DEBUG 28800 --- [http-nio-9090-exec-4] org.hibernate.SQL                        : 
+    select
+        animaltype0_.id as id1_3_0_,
+        animaltype0_.additional_attribute as addition2_3_0_,
+        animaltype0_.animal_type_desc as animal_t3_3_0_ 
+    from
+        animal_type animaltype0_ 
+    where
+        animaltype0_.id=?
+2020-02-12 12:47:16.583 DEBUG 28800 --- [http-nio-9090-exec-4] org.hibernate.SQL                        : 
+    select
+        pen0_.id as id1_5_0_,
+        pen0_.pen_area as pen_area3_5_0_,
+        pen0_.pen_name as pen_name2_5_0_,
+        area1_.id as id1_4_1_,
+        area1_.area_name as area_nam2_4_1_,
+        area1_.area_zoo as area_zoo3_4_1_ 
+    from
+        pen pen0_ 
+    left outer join
+        area area1_ 
+            on pen0_.pen_area=area1_.id 
+    where
+        pen0_.id=?
+2020-02-12 12:47:16.588 DEBUG 28800 --- [http-nio-9090-exec-4] org.hibernate.SQL                        : 
+    select
+        pens0_.pen_area as pen_area3_5_0_,
+        pens0_.id as id1_5_0_,
+        pens0_.id as id1_5_1_,
+        pens0_.pen_area as pen_area3_5_1_,
+        pens0_.pen_name as pen_name2_5_1_ 
+    from
+        pen pens0_ 
+    where
+        pens0_.pen_area=?
+2020-02-12 12:49:47.748 DEBUG 28800 --- [http-nio-9090-exec-6] org.hibernate.SQL                        : 
+    select
+        animal0_.id as id1_2_,
+        animal0_.animal_name as animal_n2_2_,
+        animal0_.animal_type as animal_t3_2_,
+        animal0_.pen_id as pen_id4_2_ 
+    from
+        animal animal0_ 
+    inner join
+        pen pen1_ 
+            on animal0_.pen_id=pen1_.id 
+    inner join
+        area area2_ 
+            on pen1_.pen_area=area2_.id 
+    inner join
+        zoo zoo3_ 
+            on area2_.area_zoo=zoo3_.id 
+    inner join
+        animal_type animaltype4_ 
+            on animal0_.animal_type=animaltype4_.id 
+    where
+        1=1 
+        and animaltype4_.id=1
+2020-02-12 12:49:49.107 DEBUG 28800 --- [http-nio-9090-exec-6] org.hibernate.SQL                        : 
+    select
+        pen0_.id as id1_5_0_,
+        pen0_.pen_area as pen_area3_5_0_,
+        pen0_.pen_name as pen_name2_5_0_,
+        area1_.id as id1_4_1_,
+        area1_.area_name as area_nam2_4_1_,
+        area1_.area_zoo as area_zoo3_4_1_ 
+    from
+        pen pen0_ 
+    left outer join
+        area area1_ 
+            on pen0_.pen_area=area1_.id 
+    where
+        pen0_.id=?
+2020-02-12 12:49:49.110 DEBUG 28800 --- [http-nio-9090-exec-6] org.hibernate.SQL                        : 
+    select
+        pens0_.pen_area as pen_area3_5_0_,
+        pens0_.id as id1_5_0_,
+        pens0_.id as id1_5_1_,
+        pens0_.pen_area as pen_area3_5_1_,
+        pens0_.pen_name as pen_name2_5_1_ 
+    from
+        pen pens0_ 
+    where
+        pens0_.pen_area=?
+2020-02-12 12:49:49.116 DEBUG 28800 --- [http-nio-9090-exec-6] org.hibernate.SQL                        : 
+    select
+        zoo0_.id as id1_6_0_,
+        zoo0_.zoo_name as zoo_name2_6_0_ 
+    from
+        zoo zoo0_ 
+    where
+        zoo0_.id=?
+2020-02-12 12:49:49.120 DEBUG 28800 --- [http-nio-9090-exec-6] org.hibernate.SQL                        : 
+    select
+        animaltype0_.id as id1_3_0_,
+        animaltype0_.additional_attribute as addition2_3_0_,
+        animaltype0_.animal_type_desc as animal_t3_3_0_ 
+    from
+        animal_type animaltype0_ 
+    where
+        animaltype0_.id=?
